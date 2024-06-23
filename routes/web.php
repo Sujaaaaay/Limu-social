@@ -26,6 +26,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     Route::post('posts/like/{post}/{user}', [PostLikeController::class, 'toggleLike'])->name('posts.likes');
+    Route::post('posts/{post}/comments', [CommentController::class, 'store']->name('comments.store'));
 });
 
 
