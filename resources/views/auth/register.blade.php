@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -46,6 +47,7 @@
 
                                 <select class="form-select" name="department_id">
                                     @foreach ($departments as $department)
+                                        
                                         <option value="{{ $department->id }}">{{ $department->name }}</option>
                                     @endforeach
                                 </select>
